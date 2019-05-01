@@ -13,12 +13,12 @@
                     <div class="card">
                         <img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/icon-whatsapp.png" alt="Icon Whatsapp">
                         <p>Atendimento<br>pelo Whatsapp</p>
-                        <a href=""><i class="fas fa-arrow-right"></i></a>
+                        <a href="http://bit.ly/wpp-contacta"><i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="card">
                         <img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/icon-email.png" alt="Icon Email">
                         <p>Atendimento<br>por E-mail</p>
-                        <a href=""><i class="fas fa-arrow-right"></i></a>
+                        <a href="mailto:cotacao@planodesaudeamilone.com"><i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="card">
                         <img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/icon-phone.png" alt="Icon Telefone">
@@ -33,4 +33,14 @@
 
     <?php wp_footer(); ?>
 </body>
+
+<script>
+function myFunction() {
+    var element = document.getElementById("menuToggle");
+    if (element.classList) { 
+        element.classList.toggle("active");
+    }
+}
+</script>
+
 </html>

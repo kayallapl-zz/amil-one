@@ -8,7 +8,7 @@ get_header();
     <header>
         <nav class="navbar">
             <div class="wrapper">
-                <img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/logo.png" class="logo" alt="logo Amil One">
+                <a href="http://planodesaudeamilone.com"><img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/logo.png" class="logo" alt="logo Amil One"></a>
                 <ul class="menu">
                     <li class="menu-item"><a href="#sobre">Sobre a Amil One</a></li>
                     <li class="menu-item"><a href="#diferenciais">Diferenciais</a></li>
@@ -16,6 +16,22 @@ get_header();
                     <li class="menu-item"><a href="#contato">Fale Conosco</a></li>
                 </ul>
             </div>
+        </nav>
+        <nav class="navbar-responsive">
+            <div class="wrapper">
+                <a href="http://planodesaudeamilone.com"><img src="http://planodesaudeamilone.com/wp-content/uploads/2019/04/logo.png" class="logo" alt="logo Amil One"></a>
+                <div class="hamburger" onclick="myFunction()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="menu" id="menuToggle">
+                <li class="menu-item"><a href="#sobre">Sobre a Amil One</a></li>
+                <li class="menu-item"><a href="#diferenciais">Diferenciais</a></li>
+                <li class="menu-item"><a href="#beneficios">Benefícios Exclusivos</a></li>
+                <li class="menu-item"><a href="#contato">Fale Conosco</a></li>
+            </ul>
         </nav>
         <div class="intro">
             <div class="wrapper">

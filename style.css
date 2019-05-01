@@ -66,6 +66,7 @@ header {
 }
 
 header .navbar {
+    display: block;
     width: 100%;
     height: 100px;
     background-color: #23343a;
@@ -116,6 +117,81 @@ header .navbar .wrapper .menu-item:last-child a {
     padding-right: 0;
 }
 
+/*navbar responsiva*/
+
+header .navbar-responsive {
+    display: none;
+    width: 100%;
+    background-color: #23343a;
+}
+
+header .navbar-responsive .wrapper {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-responsive .wrapper .logo {
+    height: 80px;
+    padding-left: 20px;
+}
+
+header .navbar-responsive .wrapper .hamburger {
+    display: none;
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 30px;
+}
+
+header .navbar-responsive .wrapper .hamburger span {
+    background-color: white;
+    height: 4px;
+    width: 40px;
+}
+
+header .navbar-responsive .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #23343a;
+    transition: all .1s linear;
+    height: 0;
+    overflow: hidden;
+}
+
+header .navbar-responsive .menu-item {
+    box-sizing: border-box;
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header .navbar-responsive .menu-item:last-child {
+    border-bottom: none;
+}
+
+header .navbar-responsive .menu-item a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    transition: all .1s linear;
+}
+
+header .navbar-responsive .menu-item a:hover {
+    color: #db0080;
+}
+
+/*fim navbar responsiva*/
+
 header .intro {
     background-image: url(http://planodesaudeamilone.com/wp-content/uploads/2019/04/bg.png);
     background-repeat: no-repeat;
@@ -149,6 +225,7 @@ header .intro .wrapper .form-card .form-card-title {
     padding: 20px;
     font-weight: 800;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 header .intro .wrapper .form-card form {
@@ -352,10 +429,6 @@ section#beneficios {
     background-size: cover;
 }
 
-section#beneficios .wrapper .content {
-    width: 450px;
-}
-
 section#beneficios .wrapper .content .content-title {
     color: white;
 }
@@ -444,8 +517,9 @@ footer#contato .wrapper .content .content-subtitle {
 
 footer#contato .wrapper .content .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 footer#contato .wrapper .content .cards .card {
@@ -498,4 +572,96 @@ footer#contato .wrapper .content p.copyright {
     font-weight: 400;
     letter-spacing: 0.6px;
     margin: 50px 0 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    header .navbar {
+        display: none;
+    }
+    header .navbar-responsive {
+        display: block;
+    }
+    header .navbar-responsive .menu.active {
+        height: 250px;
+    }
+    header .navbar-responsive .wrapper .hamburger {
+        display: flex;
+    }
+    header .intro {
+        height: auto;
+    }
+    header .intro .wrapper {
+        flex-direction: column;
+    }
+    header .intro .wrapper .form-card {
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        transform: none;
+        order: 2;
+        max-width: 350px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    header .intro .wrapper .header-text-1 {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: auto;
+        margin: auto;
+        text-align: center;
+    }
+    header .intro .wrapper .header-text-2 {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: auto;
+        margin: auto;
+        text-align: center;
+        order: 3;
+        margin-top: 30px;
+    }
+    header .intro .wrapper .form-card form input {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    section#sobre .wrapper .content {
+        margin: 30px;
+        width: auto;
+    }
+    section .wrapper .content {
+        margin: 30px;
+        width: auto;
+    }
+    section#coachsaude .wrapper .content img {
+        width: 80%;
+    }
+    section#diferenciais .wrapper .content .cards .card {
+        margin: 20px auto;
+        width: auto;
+    }
+    section#diferenciais .wrapper .content .cards .card img {
+        height: 60px;
+    }
+    section#embaixadas .wrapper .content .cards .card {
+        width: auto;
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ok {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#coachsaude .wrapper .content img {
+        width: 100%;
+    }
 }
